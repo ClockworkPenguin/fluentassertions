@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Net35", "FluentAssertions.Net35\FluentAssertions.Net35.csproj", "{B41571A3-A982-40E1-8308-7B70F5DE9CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Specs", "FluentAssertions.Specs\FluentAssertions.Specs.csproj", "{11E362B9-2A11-4452-AD28-1F8AC14AE87B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Net35.Specs", "FluentAssertions.Specs\FluentAssertions.Net35.Specs.csproj", "{11E362B9-2A11-4452-AD28-1F8AC14AE87B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Silverlight", "FluentAssertions.Silverlight\FluentAssertions.Silverlight.csproj", "{135391A1-B669-423F-8D8C-04B60DCFB8B1}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Net45.Specs", "FluentAssertions.Net45.Specs\FluentAssertions.Net45.Specs.csproj", "{442C9B50-6F91-4CBA-8D4E-B470E5CC3D5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Net40.Specs", "FluentAssertions.Net40.Specs\FluentAssertions.Net40.Specs.csproj", "{48AC561C-E086-4CE6-9AA4-D712742E204C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAssertions.Core", "FluentAssertions.Core\FluentAssertions.Core.csproj", "{E876CD74-710B-47CA-AF99-266A5F41DF60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +96,10 @@ Global
 		{48AC561C-E086-4CE6-9AA4-D712742E204C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48AC561C-E086-4CE6-9AA4-D712742E204C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48AC561C-E086-4CE6-9AA4-D712742E204C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E876CD74-710B-47CA-AF99-266A5F41DF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E876CD74-710B-47CA-AF99-266A5F41DF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E876CD74-710B-47CA-AF99-266A5F41DF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E876CD74-710B-47CA-AF99-266A5F41DF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{0EC1CB90-4D32-4020-BCDB-0AB290A355C2} = {2D1C52B7-E25D-4BD5-8688-A642A6842AA5}
 		{CE8A220A-FAA6-469D-B9B8-5F1834685861} = {2D1C52B7-E25D-4BD5-8688-A642A6842AA5}
 		{81D1792F-3C87-49CF-A502-9F232FF3719C} = {2D1C52B7-E25D-4BD5-8688-A642A6842AA5}
+		{E876CD74-710B-47CA-AF99-266A5F41DF60} = {2D1C52B7-E25D-4BD5-8688-A642A6842AA5}
 		{D09FC2D5-A5E5-4344-9E42-BCED86D21A57} = {963262D0-9FD5-4741-8C0E-E2F34F110EF3}
 		{11E362B9-2A11-4452-AD28-1F8AC14AE87B} = {963262D0-9FD5-4741-8C0E-E2F34F110EF3}
 		{16EA57DA-8A0C-4804-BBDF-E9289C87E4E0} = {963262D0-9FD5-4741-8C0E-E2F34F110EF3}
