@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 
 using FluentAssertions.Execution;
@@ -56,7 +52,7 @@ namespace FluentAssertions.Specialized
                 .BecauseOf(reason, reasonArgs)
                 .FailWith("Expected {0}{reason}, but found {1}.", typeof(TException), exception);
 
-            return new ExceptionAssertions<TException>(exceptions);            
+            return new ExceptionAssertions<TException>(exceptions);
         }
 
         /// <summary>
@@ -86,7 +82,7 @@ namespace FluentAssertions.Specialized
                         exception.GetType(), exception.Message);
             }
         }
-        
+
         /// <summary>
         /// Asserts that the current <see cref="Func{Task}"/> does not throw an exception of type <typeparamref name="TException"/>.
         /// </summary>
@@ -111,10 +107,10 @@ namespace FluentAssertions.Specialized
                 if (exception != null)
                 {
                     Execute.Assertion
-                           .ForCondition(!(exception is TException))
-                           .BecauseOf(reason, reasonArgs)
-                           .FailWith("Did not expect {0}{reason}, but found one with message {1}.",
-                                     typeof (TException), exception.Message);
+                        .ForCondition(!(exception is TException))
+                        .BecauseOf(reason, reasonArgs)
+                        .FailWith("Did not expect {0}{reason}, but found one with message {1}.",
+                            typeof(TException), exception.Message);
                 }
             }
         }
@@ -135,7 +131,5 @@ namespace FluentAssertions.Specialized
 
             return actualException;
         }
-
-
     }
 }

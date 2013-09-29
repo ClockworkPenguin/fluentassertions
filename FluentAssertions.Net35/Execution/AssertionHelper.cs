@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-#if !WINRT
-using System.Configuration;
-#endif
-
 namespace FluentAssertions.Execution
 {
     internal static class AssertionHelper
@@ -80,18 +76,13 @@ namespace FluentAssertions.Execution
                         "\" and one of the supported " +
                             " frameworks: " + string.Join(", ", frameworks.Keys.ToArray());
 #endif
-
-#if !WINRT
-            throw new ConfigurationErrorsException(errorMessage);
-#else
-            throw new InvalidOperationException(errorMessage);
-#endif
+            throw new ApplicationException(errorMessage);
         }
 
 #if !WINRT
         private static ITestFramework AttemptToDetectUsingAppSetting()
         {
-            string frameworkName = ConfigurationManager.AppSettings[AppSettingKey];
+            string frameworkName = Providers.Configuration.TestFramework;
 
             if (!string.IsNullOrEmpty(frameworkName) && frameworks.ContainsKey(frameworkName.ToLower()))
             {

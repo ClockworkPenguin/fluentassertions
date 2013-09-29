@@ -93,6 +93,8 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="AssertionExtensions.Net35.cs" />
+    <Compile Include="AttributeBasedThreadStorage.cs" />
     <Compile Include="Common\ObjectExtensions.cs" />
     <Compile Include="Common\StringExtensions.cs" />
     <Compile Include="Common\TypeExtensions.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="Formatting\GuidValueFormatter.cs" />
     <Compile Include="Formatting\PropertyInfoFormatter.cs" />
     <Compile Include="Formatting\ValueFormatterAttribute.cs" />
+    <Compile Include="IThreadStorage.cs" />
+    <Compile Include="Providers.cs" />
     <Compile Include="Specialized\ActionAssertions.cs" />
     <Compile Include="AndConstraint.cs" />
     <Compile Include="Equivalency\AllDeclaredPublicPropertiesSelectionRule.cs" />

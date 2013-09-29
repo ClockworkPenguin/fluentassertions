@@ -29,15 +29,18 @@ namespace FluentAssertions.Execution
         private bool succeeded;
         private bool useLineBreaks;
 
-        [ThreadStatic]
-        private static AssertionScope current;
-
         private AssertionScope parent;
 
         internal static AssertionScope Current
         {
-            get { return current ?? new AssertionScope(new DefaultAssertionStrategy()); }
-            set { current = value; }
+            get { return CurrentInternal ?? new AssertionScope(new DefaultAssertionStrategy()); }
+            set { CurrentInternal = value; }
+        }
+
+        private static AssertionScope CurrentInternal
+        {
+            get { return Providers.ThreadStorage.Get<AssertionScope>("AssertionScope"); }
+            set { Providers.ThreadStorage.Set("AssertionScope", value); }
         }
 
         #endregion
@@ -45,10 +48,11 @@ namespace FluentAssertions.Execution
         /// <summary>
         /// Initializes a new instance of the <see cref="AssertionScope"/> class.
         /// </summary>
-        public AssertionScope() : this(new CollectingAssertionStrategy((current != null) ? current.assertionStrategy : null))
+        public AssertionScope()
+            : this(new CollectingAssertionStrategy((CurrentInternal != null) ? CurrentInternal.assertionStrategy : null))
         {
-            parent = current;
-            current = this;
+            parent = CurrentInternal;
+            CurrentInternal = this;
 
             if (parent != null)
             {
@@ -307,7 +311,7 @@ namespace FluentAssertions.Execution
                 {
                     return Formatter.ToString(item.Value);
                 }
-                
+
                 return item.Value.ToString();
             }
 

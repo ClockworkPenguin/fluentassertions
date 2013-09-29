@@ -8,8 +8,8 @@
     <ProjectGuid>{E876CD74-710B-47CA-AF99-266A5F41DF60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentAssertions.Core</RootNamespace>
-    <AssemblyName>FluentAssertions.Core</AssemblyName>
+    <RootNamespace>FluentAssertions</RootNamespace>
+    <AssemblyName>FluentAssertions</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile96</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -35,9 +35,6 @@
   <ItemGroup>
     <Compile Include="..\FluentAssertions.Net35\AndConstraint.cs">
       <Link>AndConstraint.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\AssertionExtensions.cs">
-      <Link>AssertionExtensions.cs</Link>
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Collections\CollectionAssertions.cs">
       <Link>Collections\CollectionAssertions.cs</Link>
@@ -279,6 +276,9 @@
     <Compile Include="..\FluentAssertions.Net35\Formatting\XElementValueFormatter.cs">
       <Link>Formatting\XElementValueFormatter.cs</Link>
     </Compile>
+    <Compile Include="..\FluentAssertions.Net35\IThreadStorage.cs">
+      <Link>IThreadStorage.cs</Link>
+    </Compile>
     <Compile Include="..\FluentAssertions.Net35\NumericAssertionsExtensions.cs">
       <Link>NumericAssertionsExtensions.cs</Link>
     </Compile>
@@ -344,6 +344,9 @@
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Primitives\TimeSpanAssertions.cs">
       <Link>Primitives\TimeSpanAssertions.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Providers.cs">
+      <Link>Providers.cs</Link>
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Specialized\ActionAssertions.cs">
       <Link>Specialized\ActionAssertions.cs</Link>
