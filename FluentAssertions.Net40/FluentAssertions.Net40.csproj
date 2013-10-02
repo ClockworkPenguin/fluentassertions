@@ -75,6 +75,9 @@
     <Compile Include="..\FluentAssertions.Net35\Events\EventHandlerFactory.cs">
       <Link>Events\EventHandlerFactory.cs</Link>
     </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Primitives\ObjectAssertions.Net40.cs">
+      <Link>Primitives\ObjectAssertions.Net40.cs</Link>
+    </Compile>
     <Compile Include="AssertionExtensions.Net40.cs" />
     <Compile Include="ExceptionExtensionsNet40.cs" />
     <Compile Include="Formatting\AggregateExceptionValueFormatter.cs" />
@@ -92,6 +95,7 @@
       <Name>FluentAssertions.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

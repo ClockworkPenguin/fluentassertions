@@ -110,6 +110,7 @@
     <Compile Include="Formatting\PropertyInfoFormatter.cs" />
     <Compile Include="Formatting\ValueFormatterAttribute.cs" />
     <Compile Include="IThreadStorage.cs" />
+    <Compile Include="Primitives\ObjectAssertions.Net40.cs" />
     <Compile Include="Providers.cs" />
     <Compile Include="Specialized\ActionAssertions.cs" />
     <Compile Include="AndConstraint.cs" />
