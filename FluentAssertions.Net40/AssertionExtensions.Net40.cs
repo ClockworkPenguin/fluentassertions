@@ -9,7 +9,7 @@ namespace FluentAssertions
     {
         static AssertionExtensions()
         {
-            Providers.ThreadStorage = new AttributeBasedThreadStorage();
+            Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider();
         }
     }
 }

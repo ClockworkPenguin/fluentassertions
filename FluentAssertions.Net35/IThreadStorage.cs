@@ -2,7 +2,7 @@
 
 namespace FluentAssertions
 {
-    public interface IThreadStorage
+    public interface IThreadStorageProvider
     {
         T Get<T>(string key);
 

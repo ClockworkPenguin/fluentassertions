@@ -82,7 +82,7 @@ namespace FluentAssertions.Execution
 #if !WINRT
         private static ITestFramework AttemptToDetectUsingAppSetting()
         {
-            string frameworkName = Providers.Configuration.TestFramework;
+            string frameworkName = Providers.ConfigurationProvider.TestFramework;
 
             if (!string.IsNullOrEmpty(frameworkName) && frameworks.ContainsKey(frameworkName.ToLower()))
             {

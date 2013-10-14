@@ -1,15 +1,23 @@
-﻿using FluentAssertions.Execution;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FluentAssertions
 {
     public static class Providers
     {
-        public static IConfiguration Configuration { get; set; }
+        public static IConfigurationProvider ConfigurationProvider { get; set; }
 
-        public static IThreadStorage ThreadStorage { get; set; }
+        public static IThreadStorageProvider ThreadStorageProvider { get; set; }
+
+        public static IReflectionProvider Reflection { get; set; }
     }
 
-    public interface IConfiguration
+    public interface IReflectionProvider
+    {
+        IEnumerable<Type> GetAllTypes { get; }
+    }
+
+    public interface IConfigurationProvider
     {
         string TestFramework { get; }
     }

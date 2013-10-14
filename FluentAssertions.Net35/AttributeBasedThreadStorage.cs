@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FluentAssertions
 {
-    internal class AttributeBasedThreadStorage : IThreadStorage
+    internal class AttributeBasedThreadStorageProvider : IThreadStorageProvider
     {
         [ThreadStatic]
         private static Dictionary<string, object> dictionary; 

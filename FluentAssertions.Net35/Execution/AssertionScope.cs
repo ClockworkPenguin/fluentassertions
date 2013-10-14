@@ -39,8 +39,8 @@ namespace FluentAssertions.Execution
 
         private static AssertionScope CurrentInternal
         {
-            get { return Providers.ThreadStorage.Get<AssertionScope>("AssertionScope"); }
-            set { Providers.ThreadStorage.Set("AssertionScope", value); }
+            get { return Providers.ThreadStorageProvider.Get<AssertionScope>("AssertionScope"); }
+            set { Providers.ThreadStorageProvider.Set("AssertionScope", value); }
         }
 
         #endregion
