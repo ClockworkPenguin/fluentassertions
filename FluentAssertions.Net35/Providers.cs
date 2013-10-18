@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FluentAssertions
+﻿namespace FluentAssertions
 {
     public static class Providers
     {
@@ -10,15 +7,7 @@ namespace FluentAssertions
         public static IThreadStorageProvider ThreadStorageProvider { get; set; }
 
         public static IReflectionProvider Reflection { get; set; }
-    }
 
-    public interface IReflectionProvider
-    {
-        IEnumerable<Type> GetAllTypes { get; }
-    }
-
-    public interface IConfigurationProvider
-    {
-        string TestFramework { get; }
+        public static IAssertionHelper AssertionHelper { get; set; }
     }
 }

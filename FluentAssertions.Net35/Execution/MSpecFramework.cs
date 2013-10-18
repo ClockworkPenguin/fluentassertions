@@ -1,6 +1,6 @@
 ﻿namespace FluentAssertions.Execution
 {
-    internal class MSpecFramework : LateBoundTestFramework
+    public class MSpecFramework : LateBoundTestFramework
     {
         protected override string AssemblyName
         {

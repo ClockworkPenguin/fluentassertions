@@ -109,6 +109,9 @@
     <Compile Include="Formatting\GuidValueFormatter.cs" />
     <Compile Include="Formatting\PropertyInfoFormatter.cs" />
     <Compile Include="Formatting\ValueFormatterAttribute.cs" />
+    <Compile Include="IAssertionHelper.cs" />
+    <Compile Include="IConfigurationProvider.cs" />
+    <Compile Include="IReflectionProvider.cs" />
     <Compile Include="IThreadStorage.cs" />
     <Compile Include="Primitives\ObjectAssertions.Net40.cs" />
     <Compile Include="Providers.cs" />

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace FluentAssertions.Execution
 {
-    internal static class AssertionHelper
+    internal class AssertionHelper : IAssertionHelper
     {
         #region Private Definitions
 
@@ -26,7 +26,7 @@ namespace FluentAssertions.Execution
 
         #endregion
 
-        public static void Throw(string message)
+        public void Throw(string message)
         {
             TestFramework.Throw(message);
         }
@@ -49,9 +49,7 @@ namespace FluentAssertions.Execution
         {
             ITestFramework detectedFramework = null;
             
-#if !WINRT
             detectedFramework = AttemptToDetectUsingAppSetting();
-#endif
             if (detectedFramework == null)
             {
                 detectedFramework = AttemptToDetectUsingAssemblyScanning();
@@ -69,17 +67,13 @@ namespace FluentAssertions.Execution
         {
             string errorMessage =
                 "Failed to detect the test framework. Make sure that the framework assembly is copied into the test run directory" 
-#if WINRT
-                ;
-#else
                 + ", or configure it explicitly in the <appSettings> section using key \"" + AppSettingKey +
                         "\" and one of the supported " +
                             " frameworks: " + string.Join(", ", frameworks.Keys.ToArray());
-#endif
+            
             throw new ApplicationException(errorMessage);
         }
 
-#if !WINRT
         private static ITestFramework AttemptToDetectUsingAppSetting()
         {
             string frameworkName = Providers.ConfigurationProvider.TestFramework;
@@ -99,7 +93,6 @@ namespace FluentAssertions.Execution
 
             return null;
         }
-#endif
 
         private static ITestFramework AttemptToDetectUsingAssemblyScanning()
         {

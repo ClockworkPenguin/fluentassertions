@@ -20,7 +20,7 @@ namespace FluentAssertions.Execution
         /// </summary>
         public void HandleFailure(string message)
         {
-            AssertionHelper.Throw(message);
+            Providers.AssertionHelper.Throw(message);
         }
 
         /// <summary>

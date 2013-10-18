@@ -8,7 +8,7 @@ using System.Reflection.RuntimeExtensions;
 
 namespace FluentAssertions.Execution
 {
-    internal class GallioTestFramework : ITestFramework
+    public class GallioTestFramework : ITestFramework
     {
         private Assembly assembly;
 

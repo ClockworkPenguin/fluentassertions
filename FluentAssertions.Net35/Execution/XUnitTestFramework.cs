@@ -1,6 +1,6 @@
 ﻿namespace FluentAssertions.Execution
 {
-    internal class XUnitTestFramework : LateBoundTestFramework
+    public class XUnitTestFramework : LateBoundTestFramework
     {
         protected override string AssemblyName
         {

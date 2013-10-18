@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace FluentAssertions.Execution
 {
-    internal abstract class LateBoundTestFramework : ITestFramework
+    public abstract class LateBoundTestFramework : ITestFramework
     {
         private Assembly assembly;
 

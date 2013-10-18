@@ -1,6 +1,6 @@
 ﻿namespace FluentAssertions.Execution
 {
-    internal class MSTestFramework : LateBoundTestFramework
+    public class MSTestFramework : LateBoundTestFramework
     {
         protected override string ExceptionFullName
         {

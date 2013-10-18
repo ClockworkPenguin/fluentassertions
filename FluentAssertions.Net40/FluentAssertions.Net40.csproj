@@ -75,6 +75,39 @@
     <Compile Include="..\FluentAssertions.Net35\Events\EventHandlerFactory.cs">
       <Link>Events\EventHandlerFactory.cs</Link>
     </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\AssertionHelper.cs">
+      <Link>Execution\AssertionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\FallbackTestFramework.cs">
+      <Link>Execution\FallbackTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\GallioTestFramework.cs">
+      <Link>Execution\GallioTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\ITestFramework.cs">
+      <Link>Execution\ITestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs">
+      <Link>Execution\LateBoundTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\MbUnitTestFramework.cs">
+      <Link>Execution\MbUnitTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\MSpecFramework.cs">
+      <Link>Execution\MSpecFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\MSTestFramework.cs">
+      <Link>Execution\MSTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\NUnitTestFramework.cs">
+      <Link>Execution\NUnitTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Execution\XUnitTestFramework.cs">
+      <Link>Execution\XUnitTestFramework.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Formatting\AttributeBasedFormatter.cs">
+      <Link>Formatting\AttributeBasedFormatter.cs</Link>
+    </Compile>
     <Compile Include="..\FluentAssertions.Net35\Primitives\ObjectAssertions.Net40.cs">
       <Link>Primitives\ObjectAssertions.Net40.cs</Link>
     </Compile>

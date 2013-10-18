@@ -11,9 +11,14 @@
     <RootNamespace>FluentAssertions</RootNamespace>
     <AssemblyName>FluentAssertions</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile96</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile147</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -174,9 +179,6 @@
     <Compile Include="..\FluentAssertions.Net35\ExceptionExtensions.cs">
       <Link>ExceptionExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\AssertionHelper.cs">
-      <Link>Execution\AssertionHelper.cs</Link>
-    </Compile>
     <Compile Include="..\FluentAssertions.Net35\Execution\AssertionScope.cs">
       <Link>Execution\AssertionScope.cs</Link>
     </Compile>
@@ -189,41 +191,11 @@
     <Compile Include="..\FluentAssertions.Net35\Execution\Execute.cs">
       <Link>Execution\Execute.cs</Link>
     </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\FallbackTestFramework.cs">
-      <Link>Execution\FallbackTestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\GallioTestFramework.cs">
-      <Link>Execution\GallioTestFramework.cs</Link>
-    </Compile>
     <Compile Include="..\FluentAssertions.Net35\Execution\IAssertionStrategy.cs">
       <Link>Execution\IAssertionStrategy.cs</Link>
     </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\ITestFramework.cs">
-      <Link>Execution\ITestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs">
-      <Link>Execution\LateBoundTestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\MbUnitTestFramework.cs">
-      <Link>Execution\MbUnitTestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\MSpecFramework.cs">
-      <Link>Execution\MSpecFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\MSTestFramework.cs">
-      <Link>Execution\MSTestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\NUnitTestFramework.cs">
-      <Link>Execution\NUnitTestFramework.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Execution\XUnitTestFramework.cs">
-      <Link>Execution\XUnitTestFramework.cs</Link>
-    </Compile>
     <Compile Include="..\FluentAssertions.Net35\FluentDateTimeExtensions.cs">
       <Link>FluentDateTimeExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Formatting\AttributeBasedFormatter.cs">
-      <Link>Formatting\AttributeBasedFormatter.cs</Link>
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Formatting\DateTimeValueFormatter.cs">
       <Link>Formatting\DateTimeValueFormatter.cs</Link>
@@ -275,6 +247,15 @@
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Formatting\XElementValueFormatter.cs">
       <Link>Formatting\XElementValueFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\IAssertionHelper.cs">
+      <Link>IAssertionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\IConfigurationProvider.cs">
+      <Link>IConfigurationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\IReflectionProvider.cs">
+      <Link>IReflectionProvider.cs</Link>
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\IThreadStorage.cs">
       <Link>IThreadStorage.cs</Link>

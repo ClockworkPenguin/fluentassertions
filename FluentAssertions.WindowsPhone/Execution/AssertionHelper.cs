@@ -39,9 +39,7 @@ namespace FluentAssertions.Execution
         
         private static ITestFramework FindStrategy()
         {
-            ITestFramework detectedFramework = null;
-                detectedFramework = AttemptToDetectUsingAssemblyScanning();
-
+            ITestFramework detectedFramework = AttemptToDetectUsingAssemblyScanning();
             if (detectedFramework == null)
             {
                 FailWithIncorrectConfiguration();

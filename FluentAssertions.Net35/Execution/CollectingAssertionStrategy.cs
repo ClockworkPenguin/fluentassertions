@@ -54,7 +54,7 @@ namespace FluentAssertions.Execution
                     }
                 }
 
-                AssertionHelper.Throw(builder.ToString());
+                Providers.AssertionHelper.Throw(builder.ToString());
             }
         }
 
