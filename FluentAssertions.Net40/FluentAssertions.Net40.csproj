@@ -72,6 +72,9 @@
     <Compile Include="..\FluentAssertions.Net35\AttributeBasedThreadStorage.cs">
       <Link>AttributeBasedThreadStorage.cs</Link>
     </Compile>
+    <Compile Include="..\FluentAssertions.Net35\EventMonitoringExtensions.cs">
+      <Link>EventMonitoringExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\FluentAssertions.Net35\Events\EventHandlerFactory.cs">
       <Link>Events\EventHandlerFactory.cs</Link>
     </Compile>
@@ -110,6 +113,9 @@
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Primitives\ObjectAssertions.Net40.cs">
       <Link>Primitives\ObjectAssertions.Net40.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentAssertions.Net35\Specialized\ExecutionTimeAssertions.cs">
+      <Link>Specialized\ExecutionTimeAssertions.cs</Link>
     </Compile>
     <Compile Include="AssertionExtensions.Net40.cs" />
     <Compile Include="ExceptionExtensionsNet40.cs" />

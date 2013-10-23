@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 
+using FluentAssertions.Collections;
 using FluentAssertions.Execution;
 
 namespace FluentAssertions.Equivalency
@@ -92,7 +93,7 @@ namespace FluentAssertions.Equivalency
                 }
                 else
                 {
-                    subject.Should().BeEquivalentTo(expectation);
+                    new NonGenericCollectionAssertions(subject).BeEquivalentTo(expectation);
                 }
             }
         }

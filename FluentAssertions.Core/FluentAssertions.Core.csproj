@@ -161,9 +161,6 @@
     <Compile Include="..\FluentAssertions.Net35\Equivalency\TryMatchByNameRule.cs">
       <Link>Equivalency\TryMatchByNameRule.cs</Link>
     </Compile>
-    <Compile Include="..\FluentAssertions.Net35\EventMonitoringExtensions.cs">
-      <Link>EventMonitoringExtensions.cs</Link>
-    </Compile>
     <Compile Include="..\FluentAssertions.Net35\Events\EventRecorder.cs">
       <Link>Events\EventRecorder.cs</Link>
     </Compile>
@@ -334,9 +331,6 @@
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\Specialized\ExceptionAssertions.cs">
       <Link>Specialized\ExceptionAssertions.cs</Link>
-    </Compile>
-    <Compile Include="..\FluentAssertions.Net35\Specialized\ExecutionTimeAssertions.cs">
-      <Link>Specialized\ExecutionTimeAssertions.cs</Link>
     </Compile>
     <Compile Include="..\FluentAssertions.Net35\TimeSpanConversionExtensions.cs">
       <Link>TimeSpanConversionExtensions.cs</Link>

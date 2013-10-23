@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 using FluentAssertions.Common;
+using FluentAssertions.Primitives;
 
 namespace FluentAssertions.Equivalency
 {
@@ -43,11 +44,11 @@ namespace FluentAssertions.Equivalency
         {
             Using(new MustMatchByNameRule());
             
-            Using<string>(ctx => ctx.Subject.Should().Be(ctx.Expectation, ctx.Reason, ctx.ReasonArgs)).
+            Using<string>(ctx => new StringAssertions(ctx.Subject).Be(ctx.Expectation, ctx.Reason, ctx.ReasonArgs)).
                 WhenTypeIs<string>();
 
             Using<DateTime>(
-                ctx => ctx.Subject.Should().Be(ctx.Expectation, ctx.Reason, ctx.ReasonArgs)).WhenTypeIs<DateTime>();
+                ctx => new DateTimeAssertions(ctx.Subject).Be(ctx.Expectation, ctx.Reason, ctx.ReasonArgs)).WhenTypeIs<DateTime>();
         }
 
         /// <summary>

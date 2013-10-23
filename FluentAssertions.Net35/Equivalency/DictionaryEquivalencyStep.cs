@@ -1,6 +1,7 @@
 using System.Collections;
 
 using FluentAssertions.Execution;
+using FluentAssertions.Primitives;
 
 namespace FluentAssertions.Equivalency
 {
@@ -39,7 +40,7 @@ namespace FluentAssertions.Equivalency
                     }
                     else
                     {
-                        subject[key].Should().Be(expectation[key], context.Reason, context.ReasonArgs);
+                        new ObjectAssertions(subject[key]).Be(expectation[key], context.Reason, context.ReasonArgs);
                     }
                 }
             }

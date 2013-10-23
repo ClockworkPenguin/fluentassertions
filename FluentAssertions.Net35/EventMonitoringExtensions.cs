@@ -5,10 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using FluentAssertions.Common;
+
 using FluentAssertions.Events;
 using FluentAssertions.Execution;
-
 
 namespace FluentAssertions
 {
@@ -32,10 +31,10 @@ namespace FluentAssertions
             return MonitorEventsRaisedBy(eventSource);
         }
 #else
-        /// <summary>
-        ///   Starts monitoring an object for its <see cref="INotifyPropertyChanged.PropertyChanged"/> events.
-        /// </summary>
-        /// <exception cref = "ArgumentNullException">Thrown if eventSource is Null.</exception>
+    /// <summary>
+    ///   Starts monitoring an object for its <see cref="INotifyPropertyChanged.PropertyChanged"/> events.
+    /// </summary>
+    /// <exception cref = "ArgumentNullException">Thrown if eventSource is Null.</exception>
         public static IEnumerable<EventRecorder> MonitorEvents(this INotifyPropertyChanged eventSource)
         {
             return MonitorEventsRaisedBy(eventSource);
@@ -61,15 +60,15 @@ namespace FluentAssertions
         {
             var recorders =
                 eventSource.GetType()
-                .GetEvents()
-                .Select(@event => CreateEventHandler(eventSource, @event)).ToArray();
+                    .GetEvents()
+                    .Select(@event => CreateEventHandler(eventSource, @event)).ToArray();
 
             if (!recorders.Any())
             {
                 throw new InvalidOperationException(
                     string.Format("Type {0} does not expose any events.", eventSource.GetType().Name));
             }
-            
+
             return recorders;
         }
 
@@ -196,7 +195,7 @@ namespace FluentAssertions
         }
 
 #endif
-        
+
         /// <summary>
         /// Asserts that an object has raised the <see cref="INotifyPropertyChanged.PropertyChanged"/> event for a particular property.
         /// </summary>
@@ -241,12 +240,12 @@ namespace FluentAssertions
                 Execute.Assertion
                     .BecauseOf(reason, reasonArgs)
                     .FailWith("Expected object {0} to raise event {1} for property {2}{reason}, but it did not.",
-                    eventSource, PropertyChangedEventName, propertyName);
+                        eventSource, PropertyChangedEventName, propertyName);
             }
 
             return eventRecorder.WithArgs<PropertyChangedEventArgs>(args => args.PropertyName == propertyName);
         }
-        
+
         /// <summary>
         /// Asserts that an object has not raised the <see cref="INotifyPropertyChanged.PropertyChanged"/> event for a particular property.
         /// </summary>
@@ -350,7 +349,8 @@ namespace FluentAssertions
         /// <summary>
         /// Asserts that at least one occurrence of the event had an <see cref="EventArgs"/> object matching a predicate.
         /// </summary>
-        public static IEventRecorder WithArgs<T>(this IEventRecorder eventRecorder, Expression<Func<T, bool>> predicate) where T : EventArgs
+        public static IEventRecorder WithArgs<T>(this IEventRecorder eventRecorder, Expression<Func<T, bool>> predicate)
+            where T : EventArgs
         {
             Func<T, bool> compiledPredicate = predicate.Compile();
 

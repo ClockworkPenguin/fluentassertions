@@ -3,10 +3,10 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 
 using FluentAssertions.Execution;
-
 #if WINRT
 using System.Reflection;
 #endif
+using FluentAssertions.Types;
 
 namespace FluentAssertions.Primitives
 {
@@ -75,7 +75,7 @@ namespace FluentAssertions.Primitives
         /// </param>
         public AndConstraint<TAssertions> BeOfType<T>(string reason = "", params object[] reasonArgs)
         {
-            Subject.GetType().Should().Be<T>(reason, reasonArgs);
+            new TypeAssertions(Subject.GetType()).Be<T>(reason, reasonArgs);
 
             return new AndConstraint<TAssertions>((TAssertions)this);
         }

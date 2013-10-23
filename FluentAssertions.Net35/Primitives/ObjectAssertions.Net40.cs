@@ -7,7 +7,7 @@ using FluentAssertions.Execution;
 
 namespace FluentAssertions.Primitives
 {
-    public partial class ObjectAssertions
+    public static class ObjectAssertionsExtensions
     {
         /// <summary>
         /// Asserts that an object can be serialized and deserialized using the binary serializer and that it stills retains
@@ -20,23 +20,24 @@ namespace FluentAssertions.Primitives
         /// <param name="reasonArgs">
         /// Zero or more objects to format using the placeholders in <see cref="reason" />.
         /// </param>
-        public AndConstraint<ObjectAssertions> BeBinarySerializable(string reason = "", params object[] reasonArgs)
+        public static AndConstraint<ObjectAssertions> BeBinarySerializable(this ObjectAssertions  assertions, 
+            string reason = "", params object[] reasonArgs)
         {
             try
             {
-                object deserializedObject = CreateCloneUsingBinarySerializer(Subject);
+                object deserializedObject = CreateCloneUsingBinarySerializer(assertions.Subject);
 
-                deserializedObject.ShouldHave().AllRuntimeProperties().EqualTo(Subject);
+                deserializedObject.ShouldHave().AllRuntimeProperties().EqualTo(assertions.Subject);
             }
             catch (Exception exc)
             {
                 Execute.Assertion
                     .BecauseOf(reason, reasonArgs)
-                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:\r\n\r\n{1}", Subject,
+                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:\r\n\r\n{1}", assertions.Subject,
                         exc.Message);
             }
 
-            return new AndConstraint<ObjectAssertions>(this);
+            return new AndConstraint<ObjectAssertions>(assertions);
         }
 
         private static object CreateCloneUsingBinarySerializer(object subject)
@@ -60,23 +61,23 @@ namespace FluentAssertions.Primitives
         /// <param name="reasonArgs">
         /// Zero or more objects to format using the placeholders in <see cref="reason" />.
         /// </param>
-        public AndConstraint<ObjectAssertions> BeXmlSerializable(string reason = "", params object[] reasonArgs)
+        public static AndConstraint<ObjectAssertions> BeXmlSerializable(this ObjectAssertions assertions, string reason = "", params object[] reasonArgs)
         {
             try
             {
-                object deserializedObject = CreateCloneUsingXmlSerializer(Subject);
+                object deserializedObject = CreateCloneUsingXmlSerializer(assertions.Subject);
 
-                deserializedObject.ShouldHave().AllRuntimeProperties().EqualTo(Subject);
+                deserializedObject.ShouldHave().AllRuntimeProperties().EqualTo(assertions.Subject);
             }
             catch (Exception exc)
             {
                 Execute.Assertion
                     .BecauseOf(reason, reasonArgs)
-                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:\r\n\r\n{1}", Subject,
+                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:\r\n\r\n{1}", assertions.Subject,
                         exc.Message);
             }
 
-            return new AndConstraint<ObjectAssertions>(this);
+            return new AndConstraint<ObjectAssertions>(assertions);
         }
 
         private static object CreateCloneUsingXmlSerializer(object subject)

@@ -292,7 +292,7 @@ namespace FluentAssertions.Specialized
                         {
                             scope.AddNonReportable("context", Context);
 
-                            message.Should().MatchEquivalentOf(string.Format(Pattern, expectation), reason, reasonArgs);
+                            new StringAssertions(message).MatchEquivalentOf(string.Format(Pattern, expectation), reason, reasonArgs);
 
                             results.AddSet(message, scope.Discard());
                         }

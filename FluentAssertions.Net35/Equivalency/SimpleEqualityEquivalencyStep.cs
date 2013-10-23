@@ -1,3 +1,5 @@
+using FluentAssertions.Primitives;
+
 namespace FluentAssertions.Equivalency
 {
     public class SimpleEqualityEquivalencyStep : IEquivalencyStep
@@ -22,7 +24,7 @@ namespace FluentAssertions.Equivalency
         /// </remarks>
         public virtual bool Handle(EquivalencyValidationContext context, IEquivalencyValidator structuralEqualityValidator, IEquivalencyAssertionOptions config)
         {
-            context.Subject.Should().Be(context.Expectation, context.Reason, context.ReasonArgs);
+            new ObjectAssertions(context.Subject).Be(context.Expectation, context.Reason, context.ReasonArgs);
 
             return true;
         }
