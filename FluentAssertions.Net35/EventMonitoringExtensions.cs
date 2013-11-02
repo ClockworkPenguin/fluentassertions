@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
+using FluentAssertions.Common;
 using FluentAssertions.Events;
 using FluentAssertions.Execution;
 

@@ -2554,6 +2554,7 @@ namespace FluentAssertions.Specs
             //-----------------------------------------------------------------------------------------------------------
             // Arrange
             //-----------------------------------------------------------------------------------------------------------
+            Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider();
             var scope = new AssertionScope();
 
             AssertionScope.Current.FailWith("Failure1");
@@ -2583,6 +2584,7 @@ namespace FluentAssertions.Specs
             //-----------------------------------------------------------------------------------------------------------
             // Arrange
             //-----------------------------------------------------------------------------------------------------------
+            Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider(); 
             var scope = new AssertionScope();
 
             AssertionScope.Current.FailWith("Failure1");
@@ -2624,6 +2626,7 @@ namespace FluentAssertions.Specs
             //-----------------------------------------------------------------------------------------------------------
             // Arrange
             //-----------------------------------------------------------------------------------------------------------
+            Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider(); 
             var scope = new AssertionScope();
 
             AssertionScope.Current.FailWith("Failure1");
@@ -2666,6 +2669,7 @@ namespace FluentAssertions.Specs
             //-----------------------------------------------------------------------------------------------------------
             // Arrange
             //-----------------------------------------------------------------------------------------------------------
+            Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider(); 
             var scope = new AssertionScope();
 
             AssertionScope.Current.FailWith("Failure");

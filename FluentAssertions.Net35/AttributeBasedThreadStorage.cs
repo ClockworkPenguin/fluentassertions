@@ -10,7 +10,7 @@ namespace FluentAssertions
 
         public T Get<T>(string key)
         {
-            return (T)Dictionary[key];
+            return Dictionary.ContainsKey(key) ? (T)Dictionary[key] : default (T);
         }
 
         public void Set(string key, object value)

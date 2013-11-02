@@ -1,4 +1,5 @@
 ﻿using FluentAssertions.Execution;
+using FluentAssertions.Formatting;
 
 namespace FluentAssertions
 {
@@ -6,9 +7,10 @@ namespace FluentAssertions
     {
         static AssertionExtensions()
         {
+            Formatter.AddFormatter(new AttributeBasedFormatter());
             Providers.ThreadStorageProvider = new AttributeBasedThreadStorageProvider();
             Providers.AssertionHelper = new AssertionHelper();
-            Providers.ConfigurationProvider = null;
+            Providers.ConfigurationProvider = new AppSettingsConfigurationProvider();
         }
     }
 }

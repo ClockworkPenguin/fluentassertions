@@ -93,6 +93,7 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="AppSettingsConfigurationProvider.cs" />
     <Compile Include="AssertionExtensions.Net35.cs" />
     <Compile Include="AttributeBasedThreadStorage.cs" />
     <Compile Include="Common\ObjectExtensions.cs" />
